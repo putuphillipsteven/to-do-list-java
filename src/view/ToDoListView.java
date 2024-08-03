@@ -9,6 +9,7 @@ public class ToDoListView {
     public ToDoListView(ToDoListService toDoListService) {
         this.toDoListService = toDoListService;
     }
+
     public void showToDoList() {
         while(true) {
             toDoListService.showToDoList();
@@ -30,17 +31,26 @@ public class ToDoListView {
             }
         }
     }
+
     public void addToDoList() {
         System.out.println("MENAMBAH TODO LIST");
 
         var todo  = InputUtil.input("[TEKAN X JIKA INGIN MEMBATALKAN]");
         if(todo.equals("X")) {
-//        batal
+        // batal
         } else {
            toDoListService.addToDoList(todo);
         }
     }
     public void removeToDoList() {
+        System.out.println("MENGHAPUS TODO LIST");
+        var input = InputUtil.input("[MASUKKAN NOMOR YANG INGIN DIHAPUS | X UNTUK BATAL]");
+
+        if(input.equals("X")) {
+            // batal
+        } else {
+            toDoListService.removeToDoList(Integer.parseInt(input));
+        }
 
     }
 }

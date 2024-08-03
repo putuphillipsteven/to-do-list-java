@@ -181,13 +181,12 @@ public class ToDoListApp {
         var input = input("[MASUKKAN NOMOR YANG INGIN DIHAPUS | X UNTUK BATAL]");
 
         if(input.equals("X")) {
-//            batal
+            //  batal
         } else {
             boolean success =  removeTodoList(Integer.valueOf(input));
         if(!success) {
             System.out.println("GAGAL MENGHAPUS TODO LIST: " + input);
+            }
         }
-        }
-
     }
 }
