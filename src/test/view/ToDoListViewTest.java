@@ -9,7 +9,7 @@ import view.ToDoListView;
 public class ToDoListViewTest {
 
     public static void main(String[] args) {
-        testAddToDoList();
+        testShowToDoList();
     }
 
     public static void testShowToDoList() {

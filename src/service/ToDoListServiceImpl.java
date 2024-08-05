@@ -38,7 +38,7 @@ public class ToDoListServiceImpl implements ToDoListService{
         if(result) {
         System.out.println("Sukses menghapus To Do List nomor : " + number);
         } else {
-            System.out.println("Gagal menghapus To Do List nomor : " + number);
+            System.out.println("[GAGAL] | To Do List nomor: " + number + " tidak ada.");
         }
     }
 }

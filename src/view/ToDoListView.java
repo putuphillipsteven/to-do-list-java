@@ -24,7 +24,7 @@ public class ToDoListView {
                addToDoList();
             } else if(input.equals("2")) {
                 removeToDoList();
-            } else if(input.equals("X")) {
+            } else if(input.toUpperCase().equals("X")) {
                 break;
             } else {
                 System.out.println("Pilihan tidak dimengerti.");
@@ -36,7 +36,7 @@ public class ToDoListView {
         System.out.println("MENAMBAH TODO LIST");
 
         var todo  = InputUtil.input("[TEKAN X JIKA INGIN MEMBATALKAN]");
-        if(todo.equals("X")) {
+        if(todo.toUpperCase().equals("X")) {
         // batal
         } else {
            toDoListService.addToDoList(todo);
@@ -46,7 +46,7 @@ public class ToDoListView {
         System.out.println("MENGHAPUS TODO LIST");
         var input = InputUtil.input("[MASUKKAN NOMOR YANG INGIN DIHAPUS | X UNTUK BATAL]");
 
-        if(input.equals("X")) {
+        if(input.toUpperCase().equals("X")) {
             // batal
         } else {
             toDoListService.removeToDoList(Integer.parseInt(input));
